@@ -8,13 +8,9 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         @include('partials.content-header', ['name' => 'category', 'key' => 'Add'])
-        <!-- /.content-header -->
 
-        <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -41,19 +37,11 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
-
-
-
-
-
-
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
         </div>
-        <!-- /.content -->
+
     </div>
-    <!-- /.content-wrapper -->
 
 @endsection
 
