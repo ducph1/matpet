@@ -18,6 +18,7 @@ class MenuRecusive {
             $this->html .= '<option value="' . $dataItem->id .'">' . $subMark . $dataItem->name . '</option>';
             $this->menuRecusiveAdd($dataItem->id, $subMark . '--');
         }
+
         return $this->html;
 
     }
