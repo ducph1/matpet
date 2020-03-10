@@ -22,14 +22,14 @@
                                 <input type="text"
                                        class="form-control"
                                        name="name"
-                                       placeholder="Nhập tên danh mục"
+                                       placeholder="Nhập tên menu"
                                 >
                             </div>
 
                             <div class="form-group">
                                 <label>Chọn menus cha</label>
                                 <select class="form-control" name="parent_id">
-                                    <option value="0">Chọn danh mục cha</option>
+                                    <option value="0">Chọn menu cha</option>
                                     {!! $optionSelect !!}
                                 </select>
                             </div>
