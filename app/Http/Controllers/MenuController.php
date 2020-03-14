@@ -46,4 +46,14 @@ class MenuController extends Controller
         return view('menus.edit', compact('optionSelect', 'menuFollowIdEdit'));
 
     }
+
+    public function update($id, Request $request)
+    {
+        $this->menu->find($id)->update([
+            'name' => $request->name,
+            'parent_id' => $request->parent_id,
+            'slug' => str_slug($request->name)
+        ]);
+        return redirect()->route('menus.index');
+    }
 }
