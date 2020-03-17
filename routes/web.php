@@ -90,6 +90,7 @@ Route::prefix('admin')->group(function () {
             'as' => 'product.create',
             'uses' => 'AdminProductController@create'
         ]);
+        
 
     });
 });
