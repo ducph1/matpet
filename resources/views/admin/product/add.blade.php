@@ -6,7 +6,7 @@
 
 @section('css')
     <link href="{{ asset('vendors/select2/select2.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('admin/product/add/add.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('admins/product/add/add.css') }}" rel="stylesheet"/>
 @endsection
 
 
@@ -15,7 +15,7 @@
 
     <div class="content-wrapper">
         @include('partials.content-header', ['name' => 'product', 'key' => 'Add'])
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -99,5 +99,5 @@
 @section('js')
     <script src="{{ asset('vendors/select2/select2.min.js') }}"></script>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-    <script src="{{ asset('admin/product/add/add.js') }}"></script>
+    <script src="{{ asset('admins/product/add/add.js') }}"></script>
 @endsection
