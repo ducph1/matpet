@@ -4,6 +4,12 @@
     <title>Add product</title>
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('admins/product/index/list.css') }}">
+@endsection
+@section('js')
+@endsection
+
 
 @section('content')
 
@@ -30,16 +36,16 @@
                             </thead>
                             <tbody>
 
-{{--                            @foreach($categories as $category)--}}
+                            @foreach($products as $productItem)
 
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Iphone 4</td>
-                                    <td>2.400.000</td>
+                                    <th scope="row">{{ $productItem->id  }}</th>
+                                    <td>{{ $productItem->name }}</td>
+                                    <td>{{ $productItem->price }}</td>
                                     <td>
-                                        <img src="" alt="">
+                                        <img class="product_image_150_100" src="{{ $productItem->feature_image_path }}" alt="">
                                     </td>
-                                    <td>Điện thoại</td>
+                                    <td>{{ $productItem->category->name }}</td>
                                     <td>
                                         <a href=""
                                            class="btn btn-default">Edit</a>
@@ -48,13 +54,13 @@
 
                                     </td>
                                 </tr>
-{{--                            @endforeach--}}
+                            @endforeach
 
                             </tbody>
                         </table>
                     </div>
                     <div class="col-md-12">
-{{--                        {{ $categories->links() }}--}}
+                        {{ $products->links() }}
                     </div>
 
                 </div>
