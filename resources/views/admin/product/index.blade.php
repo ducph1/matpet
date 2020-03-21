@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('admins/product/index/list.css') }}">
 @endsection
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="{{ asset('admins/product/index/list.js') }}"></script>
 @endsection
 
 
@@ -49,7 +51,8 @@
                                         <a href="{{ route('product.edit', ['id' => $productItem->id]) }}"
                                            class="btn btn-default">Edit</a>
                                         <a href=""
-                                           class="btn btn-danger">Delete</a>
+                                           data-url="{{ route('product.delete', ['id' => $productItem->id]) }}"
+                                           class="btn btn-danger action_delete">Delete</a>
 
                                     </td>
                                 </tr>
