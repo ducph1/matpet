@@ -36,12 +36,10 @@
 
                             <div class="form-group">
                                 <label>Mô tả slider</label>
-                                <input type="text"
-                                       class="form-control @error('description') is-invalid @enderror"
-                                       name="description"
-                                       placeholder="Nhập mô tả"
-                                       value="{{ old('description') }}"
-                                >
+
+                                <textarea
+                                    class="form-control @error('description') is-invalid @enderror"
+                                    name="description" rows="4">{{ old('description') }}</textarea>
                                 @error('description')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
