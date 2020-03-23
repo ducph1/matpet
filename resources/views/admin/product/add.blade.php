@@ -39,6 +39,7 @@
                                        class="form-control @error('name') is-invalid @enderror"
                                        name="name"
                                        placeholder="Nhập tên sản phẩm"
+                                       value="{{ old('name') }}"
                                 >
                                 @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -50,6 +51,7 @@
                                        class="form-control @error('price') is-invalid @enderror"
                                        name="price"
                                        placeholder="Nhập giá sản phẩm"
+                                       value="{{ old('price') }}"
                                 >
                                 @error('price')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -76,7 +78,8 @@
 
                             <div class="form-group">
                                 <label>Chọn danh mục</label>
-                                <select class="form-control select2_init @error('category_id') is-invalid @enderror" name="category_id">
+                                <select class="form-control select2_init @error('category_id') is-invalid @enderror"
+                                        name="category_id">
                                     <option value="">Chọn danh mục</option>
                                     {!! $htmlOption !!}
                                 </select>
@@ -97,8 +100,12 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Nhập nội dung</label>
-                                <textarea name="contents" class="@error('content') is-invalid @enderror form-control tinymce_editor_init" rows="8"></textarea>
-                                @error('content')
+                                <textarea
+                                    name="contents"
+                                    class="@error('contents')
+                                        is-invalid @enderror form-control tinymce_editor_init"
+                                    rows="8">{{ old('contents') }}</textarea>
+                                @error('contents')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
