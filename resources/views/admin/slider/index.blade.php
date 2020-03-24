@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="{{ asset('admins/slider/index/index.css') }}">
 @endsection
 
+@section('js')
+    <script src="{{ asset('vendors/sweetAlert2/sweetalert2@9.js') }}"></script>
+    <script src="{{ asset('admins/slider/index/index.js') }}"></script>
+@endsection
+
 
 @section('content')
 
@@ -47,7 +52,8 @@
                                         <a href="{{ route('slider.edit', ['id' => $slider->id]) }}"
                                            class="btn btn-default">Edit</a>
                                         <a href=""
-                                           class="btn btn-danger">Delete</a>
+                                           data-url="{{ route('slider.delete', ['id' => $slider->id]) }}"
+                                           class="btn btn-danger action_delete">Delete</a>
 
                                     </td>
                                 </tr>
