@@ -44,7 +44,7 @@
 
                                     </td>
                                     <td>
-                                        <a href=""
+                                        <a href="{{ route('slider.edit', ['id' => $slider->id]) }}"
                                            class="btn btn-default">Edit</a>
                                         <a href=""
                                            class="btn btn-danger">Delete</a>
