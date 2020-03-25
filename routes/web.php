@@ -160,6 +160,10 @@ Route::prefix('admin')->group(function () {
             'as' => 'settings.store',
             'uses' => 'AdminSettingController@store'
         ]);
+        Route::get('/edit/{id}', [
+            'as' => 'settings.edit',
+            'uses' => 'AdminSettingController@edit'
+        ]);
 
 
     });

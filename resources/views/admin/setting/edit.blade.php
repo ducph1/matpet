@@ -9,13 +9,13 @@
 @section('content')
 
     <div class="content-wrapper">
-        @include('partials.content-header', ['name' => 'settings', 'key' => 'Add'])
+        @include('partials.content-header', ['name' => 'settings', 'key' => 'Edit'])
 
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="{{ route('settings.store') . '?type=' . request()->type }}" method="post">
+                        <form action="{{ route('settings.store') }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label>Config key</label>
