@@ -144,6 +144,16 @@ Route::prefix('admin')->group(function () {
 
 
     });
+
+    // Settings
+    Route::prefix('settings')->group(function () {
+        Route::get('/', [
+            'as' => 'settings.index',
+            'uses' => 'AdminSettingController@index'
+        ]);
+
+
+    });
 });
 
 
