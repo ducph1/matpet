@@ -4,6 +4,12 @@
     <title>Settings</title>
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('admins/setting/index/index.css') }}">
+@endsection
+
+
+
 
 @section('content')
 
@@ -14,7 +20,16 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="" class="btn btn-success float-right m-2">Add</a>
+                        <div class="btn-group float-right">
+                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                Add setting
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('settings.create') . '?type=Text' }}">Text</a></li>
+                                <li><a href="{{ route('settings.create') . '?type=Textarea' }}">Textarea</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <table class="table">
