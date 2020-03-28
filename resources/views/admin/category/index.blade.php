@@ -4,6 +4,10 @@
     <title>Trang chu</title>
 @endsection
 
+@section('js')
+    <script src="{{ asset('vendors/sweetAlert2/sweetalert2@9.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admins/main.js') }}"></script>
+@endsection
 
 @section('content')
 
@@ -35,8 +39,9 @@
                                     <td>
                                         <a href="{{ route('categories.edit', ['id' => $category->id]) }}"
                                            class="btn btn-default">Edit</a>
-                                        <a href="{{ route('categories.delete', ['id' => $category->id]) }}"
-                                           class="btn btn-danger">Delete</a>
+                                        <a href=""
+                                           data-url="{{ route('categories.delete', ['id' => $category->id]) }}"
+                                           class="btn btn-danger action_delete">Delete</a>
 
                                     </td>
                                 </tr>
