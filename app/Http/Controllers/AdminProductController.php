@@ -41,6 +41,13 @@ class AdminProductController extends Controller
         return view('admin.product.index', compact('products'));
     }
 
+    public function search(Request $request)
+    {
+        $products = $this->product->getProductSearch($request);
+        return view('admin.product.index', compact('products'));
+
+    }
+
     public function create()
     {
         $htmlOption = $this->getCategory($parentId = '');
