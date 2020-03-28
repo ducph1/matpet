@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
     use SoftDeletes;
+    const paginates = 5;
     protected $guarded = [];
 
     public function images()
@@ -35,7 +36,6 @@ class Product extends Model
 
     public function getProductSearch($request)
     {
-        \DB::connection()->enableQueryLog();
         $products = new Product();
         if (!empty($request->product_id)) {
             $products = $products->where('products.id', $request->product_id);
@@ -55,8 +55,7 @@ class Product extends Model
             ->groupBy('products.id')
             ->select('products.*')
             ->latest('products.created_at')
-            ->paginate(5);
-        $queries = \DB::getQueryLog();
+            ->paginate(Product::paginates);
         return $products;
 
     }
