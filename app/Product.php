@@ -35,6 +35,7 @@ class Product extends Model
 
     public function getProductSearch($request)
     {
+        \DB::connection()->enableQueryLog();
         $products = new Product();
         if (!empty($request->product_id)) {
             $products = $products->where('products.id', $request->product_id);
@@ -51,9 +52,11 @@ class Product extends Model
                 ->where('tags.name', 'like', '%' . $request->tags . '%');
         }
         $products = $products
+            ->groupBy('products.id')
             ->select('products.*')
             ->latest('products.created_at')
             ->paginate(5);
+        $queries = \DB::getQueryLog();
         return $products;
 
     }
