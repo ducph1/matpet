@@ -11,6 +11,9 @@
     <script src="{{ asset('vendors/sweetAlert2/sweetalert2@9.js') }}"></script>
     <script type="text/javascript" src="{{ asset('admins/main.js') }}"></script>
 @endsection
+@section('header')
+@include('partials.header-product')
+@endsection
 
 
 @section('content')

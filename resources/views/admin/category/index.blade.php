@@ -9,6 +9,10 @@
     <script type="text/javascript" src="{{ asset('admins/main.js') }}"></script>
 @endsection
 
+@section('header')
+@include('partials.header-category')
+@endsection
+
 @section('content')
 
     <div class="content-wrapper">
