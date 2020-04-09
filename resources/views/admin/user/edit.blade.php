@@ -17,13 +17,13 @@
 @section('content')
 
     <div class="content-wrapper">
-        @include('partials.content-header', ['name' => 'User', 'key' => 'Add'])
+        @include('partials.content-header', ['name' => 'User', 'key' => 'Edit'])
 
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="{{ route('users.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Tên</label>
@@ -31,7 +31,7 @@
                                        class="form-control"
                                        name="name"
                                        placeholder="Nhập tên"
-                                       value="{{ old('name') }}"
+                                       value="{{ $user->name }}"
                                 >
                             </div>
                             <div class="form-group">
@@ -40,7 +40,7 @@
                                        class="form-control"
                                        name="email"
                                        placeholder="Nhập email"
-                                       value="{{ old('email') }}"
+                                       value="{{ $user->email }}"
                                 >
                             </div>
                             <div class="form-group">
@@ -56,8 +56,11 @@
                                 <label>Chọn vai trò</label>
                                 <select name="role_id[]" class="form-control select2_init" multiple>
                                     <option value=""></option>
+
                                     @foreach($roles as $role)
-                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                        <option
+                                            {{ $rolesOfUser->contains('id', $role->id) ? 'selected' : '' }}
+                                            value="{{ $role->id }}">{{ $role->name }}</option>
                                     @endforeach
 
                                 </select>

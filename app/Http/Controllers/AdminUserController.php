@@ -6,6 +6,9 @@ use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use PHPUnit\Exception;
+use DB;
 
 class AdminUserController extends Controller
 {
@@ -32,12 +35,30 @@ class AdminUserController extends Controller
 
     public function store(Request $request)
     {
-        $user = $this->user->create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
-        $user->roles()->attach($request->role_id);
-        return redirect()->route('users.index');
+        try {
+            DB::beginTransaction();
+            $user = $this->user->create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password)
+            ]);
+            $user->roles()->attach($request->role_id);
+            DB::commit();
+            return redirect()->route('users.index');
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            Log::error('Message :' . $exception->getMessage() . '--- Line: ' . $exception->getLine());
+
+        }
+
+    }
+
+    public function edit($id)
+    {
+        $roles = $this->role->all();
+        $user = $this->user->find($id);
+        $rolesOfUser = $user->roles;
+        return view('admin.user.edit', compact('roles', 'user', 'rolesOfUser'));
+
     }
 }
