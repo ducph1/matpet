@@ -61,4 +61,25 @@ class AdminUserController extends Controller
         return view('admin.user.edit', compact('roles', 'user', 'rolesOfUser'));
 
     }
+
+    public function update(Request $request, $id)
+    {
+        try {
+            DB::beginTransaction();
+            $this->user->find($id)->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password)
+            ]);
+            $user = $this->user->find($id);
+            $user->roles()->sync($request->role_id);
+            DB::commit();
+            return redirect()->route('users.index');
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            Log::error('Message :' . $exception->getMessage() . '--- Line: ' . $exception->getLine());
+
+        }
+
+    }
 }
