@@ -41,7 +41,7 @@
 
                                 <textarea
                                     class="form-control"
-                                    name="description" rows="4">{{ old('display_name') }}</textarea>
+                                    name="display_name" rows="4">{{ old('display_name') }}</textarea>
 
                             </div>
 
@@ -50,27 +50,29 @@
                         <div class="col-md-12">
                             <div class="row">
 
-
-                                <div class="card border-primary mb-3 col-md-12">
-                                    <div class="card-header">
-                                        <label>
-                                            <input type="checkbox" value="">
-                                        </label>
-                                        Module sản phẩm
+                                @foreach($permissionsParent as $permissionsParentItem)
+                                    <div class="card border-primary mb-3 col-md-12">
+                                        <div class="card-header">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                            </label>
+                                            Module {{ $permissionsParentItem->name }}
+                                        </div>
+                                        <div class="row">
+                                            @foreach($permissionsParentItem->permissionsChildrent as $permissionsChildrentItem)
+                                                <div class="card-body text-primary col-md-3">
+                                                    <h5 class="card-title">
+                                                        <label>
+                                                            <input type="checkbox" name="permission_id[]"
+                                                                   value="{{ $permissionsChildrentItem->id }}">
+                                                        </label>
+                                                        {{ $permissionsChildrentItem->name }}
+                                                    </h5>
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        @for($i = 1; $i <=4; $i++)
-                                            <div class="card-body text-primary col-md-3">
-                                                <h5 class="card-title">
-                                                    <label>
-                                                        <input type="checkbox" value="">
-                                                    </label>
-                                                    Thêm sản phẩm
-                                                </h5>
-                                            </div>
-                                        @endfor
-                                    </div>
-                                </div>
+                                @endforeach
 
 
                             </div>
