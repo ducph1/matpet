@@ -5,12 +5,12 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('admins/slider/add/add.css') }}">
-    <style>
-        .card-header {
-            background-color: #00e765;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('admins/role/add/add.css') }}">
+
+@endsection
+
+@section('js')
+    <script src="{{ asset('admins/role/add/add.js') }}"></script>
 @endsection
 
 
@@ -54,7 +54,7 @@
                                     <div class="card border-primary mb-3 col-md-12">
                                         <div class="card-header">
                                             <label>
-                                                <input type="checkbox" value="">
+                                                <input type="checkbox" value="" class="checkbox_wrapper">
                                             </label>
                                             Module {{ $permissionsParentItem->name }}
                                         </div>
@@ -64,6 +64,7 @@
                                                     <h5 class="card-title">
                                                         <label>
                                                             <input type="checkbox" name="permission_id[]"
+                                                                   class="checkbox_childrent"
                                                                    value="{{ $permissionsChildrentItem->id }}">
                                                         </label>
                                                         {{ $permissionsChildrentItem->name }}
