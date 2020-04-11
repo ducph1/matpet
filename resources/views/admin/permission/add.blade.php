@@ -1,4 +1,3 @@
-
 @extends('layouts.admin')
 
 @section('title')
@@ -15,46 +14,34 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <form action="{{ route('menus.store') }}" method="post">
+                        <form action="{{ route('permissions.store') }}" method="post">
                             @csrf
 
                             <div class="form-group">
-                                <label>Chon phan quyen cha</label>
-                                <select class="form-control" name="parent_id">
-                                    <option value="0">Chọn menu cha</option>
-                                    <option value="0">Chọn menu cha</option>
-                                    <option value="0">Chọn menu cha</option>
+                                <label>Chon tên module</label>
+                                <select class="form-control" name="module_parent">
+                                    <option value="">Chon tên module</option>
+                                    @foreach(config('permissions.table_module') as $moduleItem)
+                                        <option value="{{ $moduleItem }}">{{ $moduleItem }}</option>
+                                    @endforeach
+
 
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-3">
-                                        <label for="">
-                                            <input type="checkbox" value="list">
-                                            Danh sách
-                                        </label>
-                                    </div>
 
-                                    <div class="col-md-3">
-                                        <label for="">
-                                            <input type="checkbox" value="add">
-                                            Thêm
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="">
-                                            <input type="checkbox" value="edit">
-                                            Sửa
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="">
-                                            <input type="checkbox" value="delete">
-                                            Xóa
-                                        </label>
-                                    </div>
+
+                                    @foreach(config('permissions.module_childrent') as $moduleItemChilrent)
+                                        <div class="col-md-3">
+                                            <label for="">
+                                                <input type="checkbox" value="{{ $moduleItemChilrent }}" name="module_chilrent[]">
+                                                {{ $moduleItemChilrent }}
+                                            </label>
+                                        </div>
+                                    @endforeach
+
                                 </div>
                             </div>
 

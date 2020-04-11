@@ -59,10 +59,6 @@ class AdminRoleController extends Controller
         return redirect()->route('roles.index');
     }
 
-    public function createPermissions()
-    {
-        return view('admin.permission.add');
 
-    }
 
 }
