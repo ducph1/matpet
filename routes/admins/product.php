@@ -3,8 +3,7 @@
 Route::prefix('product')->group(function () {
     Route::get('/', [
         'as' => 'product.index',
-        'uses' => 'AdminProductController@index',
-        'middleware' => 'can:product-list'
+        'uses' => 'AdminProductController@index'
     ]);
     Route::get('/search', [
         'as' => 'product.search',
@@ -20,8 +19,8 @@ Route::prefix('product')->group(function () {
     ]);
     Route::get('/edit/{id}', [
         'as' => 'product.edit',
-        'uses' => 'AdminProductController@edit',
-        'middleware' => 'can:product-edit,id'
+        'uses' => 'AdminProductController@edit'
+
     ]);
 
     Route::post('/update/{id}', [
