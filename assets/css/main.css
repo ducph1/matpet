@@ -140,4 +140,95 @@
     font-size:12px;
     margin:auto;
 }
+/* css phần sản phẩm */
+.product-wrapper{
+    margin-bottom: 40px;
+}
+.main-nav{
+    margin-top:20px;
+    display:flex;
+    background-color: #ededed;
+    padding: 11px 20px;
+    border-radius: 6px;
+}
+.main-nav-home{
+    text-decoration: none;
+    font-size:14px;
+    color: var(--text-color);
+    border-right: 2px solid #cecfd6;
+    padding-right: 8px;
+}
+.main-nav-home:hover{
+    color: var(--primary-color);
+}
+
+.main-nav-text{
+    margin: 0 8px;
+    font-size:15px;
+    font-weight: 400;
+}
+.product-heading{
+    margin:45px 0;
+    text-align: center;
+}
+.product-heading a{
+    font-family: 'Coiny', cursive;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.product-item{
+
+}
+.product-item-img{
+    padding-top:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #e5e5e5;
+}
+.product-item-id{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: var(--primary-color);
+    margin:  12px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.product-item-name a{
+    font-family: 'Coiny', cursive;
+    font-size: 22px;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.product-item-name a:hover{
+    color: var(--primary-color);
+}
+.product-item-cost{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--primary-color);
+    margin:  12px 0 0 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.button-more{
+    float: right;
+    margin-bottom: 40px;
+    display:flex;
+}
+.product-more-text{
+    text-decoration: none;
+    margin: auto;
+    font-size:14px;
+    color: #fff;
+    font-weight:600;
+    text-transform: uppercase;
+}
+.button-more:hover{
+    cursor: pointer;
+    background-color: #ca76aa;
+}
 

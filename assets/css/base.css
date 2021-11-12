@@ -1,6 +1,6 @@
 :root {
     --primary-color:#de8ebe;
-    
+    --text-color:#333;
 }
 * {
     box-sizing: inherit;
@@ -22,4 +22,29 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.grid__column{
+    padding-left:12px;
+    padding-right:12px;
+    width:25%;
+}
+.button{
+    position: relative;
+    background-color: var(--primary-color);
+    height:40px;
+    width:130px;
+    border-radius:10px;
+
+}
+.button::before{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    bottom: 3px;
+    right: 3px;
+    border: 1px dashed rgba(255,255,255,0.5);
+    content: "";
+    border-radius: 10px;
 }
