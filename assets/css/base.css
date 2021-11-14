@@ -48,3 +48,9 @@ html {
     content: "";
     border-radius: 10px;
 }
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block; 
+    clear: both;
+}
