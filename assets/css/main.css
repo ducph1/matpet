@@ -31,6 +31,7 @@
 }
 .header-nav >li:hover .subnav{
     display: block;
+    animation: fadeIn 0.2s linear;
 }
 .header-nav li a{
     font-family: 'Dosis', sans-serif;
@@ -182,9 +183,6 @@
     text-transform: uppercase;
     color: var(--primary-color);
 }
-.product-item{
-
-}
 .product-item-img{
     padding-top:100%;
     background-position: center;
@@ -251,7 +249,8 @@
     position: relative;
 }
 .footer_dogs:hover .footer_dogs-info{
-    display: block;
+    /* display: block; */
+    transform: rotate(0) scale(1) ;
 }
 .dogs-row{
     position: relative;
@@ -268,8 +267,10 @@
     background-color:var(--primary-color)
 }
 .footer_dogs-info{
+    transform: rotate(-180deg) scale(0) ;
+    transition: transform .3s ease;
     position: absolute;
-    display:none;
+    /* display:none; */
     width: 100%;
     top:-100px;
     left: 18px;
