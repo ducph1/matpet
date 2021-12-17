@@ -32,10 +32,10 @@ A big shoutout to [FrontendMasters](https://github.com/FrontendMasters) for crea
     2. copy nội dung trong file `.env` sang `.env.example` file
     3. sửa lại tên Database trong `.env` file hoặc tạo mới DB tuỳ ý
     4. Tên db nằm ở `DB_DATABASE=laravel_test4`
-  3. Run `php artisan key:generate`
-  4. Run `php artisan migrate`
-  5. Run `php artisan serve`
-  6. Run <a href="localhost:8000" alt="Chạy trong trình duyệt đi các ngài">
+3. Run `php artisan key:generate`
+4. Run `php artisan migrate`
+5. Run `php artisan serve`
+6. Run <a href="localhost:8000" alt="Chạy trong trình duyệt đi các ngài">
 
 <!-- <p align="left">
 <a href="https://www.paypal.me/rahuldkjain"><img src="https://img.shields.io/badge/support-PayPal-blue?logo=PayPal&style=flat-square&label=Donate" alt="sponsor rahuldkjain"/>
