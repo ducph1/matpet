@@ -1,35 +1,41 @@
 @extends('layouts.admin')
 
 @section('title')
-    <title>Trang chu</title>
+<title>Home</title>
 @endsection
 
+@section('css')
+
+<style>
+  .sidebar .user-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user-panel .user-action ion-icon {
+    font-size: 30px;
+  }
+</style>
+
+@endsection
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-    @include('partials.content-header', ['name' => 'Home', 'key' => 'home'])
-    <!-- /.content-header -->
+<div class="content-wrapper">
+  @include('partials.content-header', ['name' => 'Home', 'key' => ''])
 
-        <!-- Main content -->
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    
-                    <div class="col-md-12">
-                        Trang chu
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
 
-                    </div>
+        <div class="col-md-12">
+          Trang chu
 
-                </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
         </div>
-        <!-- /.content -->
+
+      </div>
     </div>
-    <!-- /.content-wrapper -->
-
+  </div>
+</div>
 @endsection
-
