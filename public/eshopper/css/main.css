@@ -653,11 +653,11 @@ ul.sub-menu {
 
 .item h2 {
     color: #363432;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Coiny', cursive;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 22px;
-    margin-top: 10px;
+    margin-top: 34px;
 }
 
 .item p {
@@ -665,6 +665,17 @@ ul.sub-menu {
     font-size: 16px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
+    /* word-break: break-word; */
+    height: 148px;
+}
+.slider-img{
+    display: block;
+    object-fit:contain;
+    /* max-width:484px;
+    max-height:441px; */
+    width: 484px;
+    height: 360px;
+    border-radius: 10px;
 }
 
 .get {
@@ -898,6 +909,9 @@ h2.title {
 .single-products {
     position: relative;
 }
+.single-products p{
+    text-transform: capitalize;
+}
 
 .new,
 .sale {
@@ -921,10 +935,11 @@ h2.title {
 }
 
 .productinfo p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Coiny', cursive;
     font-size: 14px;
     font-weight: 400;
     color: #696763;
+    height: unset;
 }
 
 .productinfo img {
@@ -936,7 +951,8 @@ h2.title {
 }
 
 .product-overlay {
-    background: rgba(254, 152, 15, .8);
+    background: var(--primary-color);
+    opacity: 0.8;
     top: 0;
     display: none;
     height: 0;
@@ -1038,18 +1054,19 @@ h2.title {
 }
 
 .category-tab ul {
-    background: #40403E;
+    background: linear-gradient(var(--primary-color),#e1dee0,#88aaad);
     border-bottom: 1px solid #de8ebe;
     list-style: none outside none;
     margin: 0 0 30px;
     padding: 0;
     width: 100%;
+    border-radius: 4px;
 }
 
 .category-tab ul li a {
     border: 0 none;
-    border-radius: 0;
-    color: #B3AFA8;
+    border-radius: 4px;
+    color: #4a4a4a;
     display: block;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;

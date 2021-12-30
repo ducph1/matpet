@@ -26,7 +26,7 @@
                                     <h2>{{ number_format($productItemTabs->price) }} VND</h2>
                                     <p>{{ $productItemTabs->name }}</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                                 </div>
 
                             </div>

@@ -1,5 +1,5 @@
 <div class="recommended_items">
-    <h2 class="title text-center">recommended items</h2>
+    <h2 class="title text-center">Sản Phẩm Đề Xuất</h2>
 
     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -18,7 +18,7 @@
                                             <h2>{{ number_format($productsRecommendItem->price) }}</h2>
                                             <p>{{ $productsRecommendItem->name }}</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                                         </div>
 
                                     </div>

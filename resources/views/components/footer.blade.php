@@ -61,10 +61,10 @@
                         <div class="grid__column-4pe">
                             <h3 class="footer-heading">Liên Lạc</h3>
                             <ul class= "footer-list">
-                                <li><a href=""><i class="footer-icon fas fa-map-marker-alt"></i><span class="footer-textbold">Địa chỉ:</span> Triều Khúc - Thanh Xuân - Hà Nội</a></li>
-                                <li><a href=""><i class="footer-icon fas fa-map-marker-alt"></i><span class="footer-textbold">Địa chỉ:</span> Quang Trung - Gò Vấp - thành phố Hồ Chí Minh</a></li>
-                                <li><a href=""><i class="footer-icon fas fa-phone-alt"></i><span class="footer-textbold">Điện Thoại:</span> 0386284634</a></li>
-                                <li><a href=""><i class="footer-icon far fa-envelope"></i><span class="footer-textbold">Email:</span> matpetfake@gmail.com</a></li>
+                                <li><a href=""><i class="footer-icon fas fa-map-marker-alt"></i><span class="footer-textbold">Địa chỉ:</span> {{ getConfigValueFromSettingTable('address1') }}</a></li>
+                                <li><a href=""><i class="footer-icon fas fa-map-marker-alt"></i><span class="footer-textbold">Địa chỉ:</span> {{ getConfigValueFromSettingTable('address2') }}</a></li>
+                                <li><a href=""><i class="footer-icon fas fa-phone-alt"></i><span class="footer-textbold">Điện Thoại:</span>  {{ getConfigValueFromSettingTable('phone_contact') }}</a></li>
+                                <li><a href=""><i class="footer-icon far fa-envelope"></i><span class="footer-textbold">Email:</span>  {{ getConfigValueFromSettingTable('email') }}</a></li>
                             </ul>
                         </div>
                         <div class="grid__column-2pe">

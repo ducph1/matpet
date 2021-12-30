@@ -18,14 +18,14 @@ $baseUrl = config('app.base_url');
                         @foreach($sliders as $key => $slider)
                             <div class="item {{ $key == 0 ? 'active' : '' }}">
                                 <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
+                                    <!-- <h1><span>E</span>-SHOPPER</h1> -->
                                     <h2>{{ $slider->name }}</h2>
                                     <p>{{ $slider->description }}</p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                    <button type="button" class="btn btn-default get">Xem Ngay</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="{{ $baseUrl . $slider->image_path }}" class="girl img-responsive" alt=""/>
-                                    <img src="/eshopper/images/home/pricing.png" class="pricing" alt=""/>
+                                    <img src="{{ $baseUrl . $slider->image_path }}" class="girl img-responsive slider-img" alt=""/>
+                                    <!-- <img src="/eshopper/images/home/pricing.png" class="pricing" alt=""/> -->
                                 </div>
                             </div>
                         @endforeach

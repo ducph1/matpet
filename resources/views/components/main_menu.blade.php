@@ -1,6 +1,6 @@
 <div class="mainmenu pull-left">
     <ul class="nav navbar-nav collapse navbar-collapse">
-        <li><a href="{{ route('home') }}" class="active">Home</a></li>
+        <li><a href="{{ route('home') }}" class="active">Trang Chủ</a></li>
         @foreach($categorysLimit as $categoryParent)
             <li class="dropdown"><a href="#">
                     {{ $categoryParent->name }}
@@ -10,8 +10,8 @@
         @endforeach
 
 
-        <li><a href="404.html">404</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="404.html">Dịch Vụ</a></li>
+        <li><a href="contact-us.html">Hỗ Trợ</a></li>
 
     </ul>
 </div>
