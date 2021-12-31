@@ -657,7 +657,7 @@ ul.sub-menu {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 22px;
-    margin-top: 34px;
+    margin-top: 22px;
 }
 
 .item p {
@@ -666,7 +666,7 @@ ul.sub-menu {
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     /* word-break: break-word; */
-    height: 148px;
+    height: 224px;
 }
 .slider-img{
     display: block;
@@ -686,7 +686,7 @@ ul.sub-menu {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    margin-top: 23px;
+    margin-top: 4px;
     border-radius: 4px;
 }
 
