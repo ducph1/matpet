@@ -13,12 +13,18 @@
                                 class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                     </div>
                     <div class="product-overlay">
-                        <div class="overlay-content">
-                            <h2>{{ number_format($product->price) }} VNĐ</h2>
-                            <p>{{ $product->name }}</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i
-                                    class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
-                        </div>
+                    <a href="" style="
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    "></a>
+                            <div class="overlay-content">
+                               <a href=""> <h2>{{ number_format($product->price) }} VNĐ</h2></a>
+                               <a href=""> <p>{{ $product->name }}</p></a>
+                                <a href="#" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
+                            </div>
+                       
                     </div>
                 </div>
                 <!-- <div class="choose">

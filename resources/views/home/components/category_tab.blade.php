@@ -22,11 +22,14 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="{{ config('app.base_url') . $productItemTabs->feature_image_path }}" alt=""/>
-                                    <h2>{{ number_format($productItemTabs->price) }} VND</h2>
-                                    <p>{{ $productItemTabs->name }}</p>
+                                    <a href="">
+                                        <img src="{{ config('app.base_url') . $productItemTabs->feature_image_path }}" alt=""/>
+                                        <h2>{{ number_format($productItemTabs->price) }} VND</h2>
+                                        <p>{{ $productItemTabs->name }}</p>
+                                    </a>
                                     <a href="#" class="btn btn-default add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
+                                            class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng
+                                    </a>
                                 </div>
 
                             </div>
