@@ -14,7 +14,7 @@ class AddColumnParentIdPermission extends Migration
     public function up()
     {
         Schema::table('permissions', function (Blueprint $table) {
-//            $table->integer('parent_id')->default(0);
+            $table->integer('parent_id');
         });
     }
 

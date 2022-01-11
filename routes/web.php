@@ -74,7 +74,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [
             'as' => 'menus.index',
             'uses' => 'MenuController@index',
-            'middleware' => 'can:menu-list'
+            // 'middleware' => 'can:menu-list'
 
         ]);
         Route::get('/create', [
