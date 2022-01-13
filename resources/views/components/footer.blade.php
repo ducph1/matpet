@@ -98,7 +98,7 @@
             <div class="container">
                 <div class="footer-sub">
                     <div class="footer-sub-img">
-                        <img src="./assets/img/logomatpet.png" alt="logo">
+                        <img src="/assets/img/logomatpet.png" alt="logo">
                     </div>
                     <div class="footer-sub-text">
                         <div class="footer-sub-link">

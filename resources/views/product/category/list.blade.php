@@ -28,7 +28,8 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                         @if($category->categoryChildrent->count())
-                            <a href="">
+                            <a href="{{ route('category.product',
+                                        ['slug' => $category->slug, 'id' => $category->id]) }}">
                                 {{ $category->name }}
                             </a>
                             <a data-toggle="collapse" data-parent="#accordian" href="#sportswear_{{$category->id}}">
@@ -39,7 +40,8 @@
                             
                             @else
                             <a href="
-                            {{ route('category.product',['slug' => $categoryChilrent->slug, 'id' => $categoryChilrent->id]) }}
+                            {{ route('category.product',
+                                        ['slug' => $category->slug, 'id' => $category->id]) }}
                             "
                             >
                                 <!-- <span class="badge pull-right">
@@ -93,14 +95,14 @@
                                                     class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                                         </div>
                                         <div class="product-overlay">
-                                        <a href="" style="
+                                        <a href="{{route('productdetail',['id' => $product->id])}}" style="
                                             display: block;
                                             width: 100%;
                                             height: 100%;
                                         "></a>
                                             <div class="overlay-content">
-                                                <a href=""><h2>{{ number_format($product->price) }} VNĐ</h2></a>
-                                                <a href=""><p>{{ $product->name }}</p></a>
+                                                <a href="{{route('productdetail',['id' => $product->id])}}"><h2>{{ number_format($product->price) }} VNĐ</h2></a>
+                                                <a href="{{route('productdetail',['id' => $product->id])}}"><p>{{ $product->name }}</p></a>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
                                                         class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                                             </div>

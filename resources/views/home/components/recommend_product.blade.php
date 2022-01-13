@@ -14,7 +14,7 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                           <a href="">
+                                           <a href="{{route('productdetail',['id' => $productsRecommendItem->id])}}">
                                                 <img src="{{ config('app.base_url') . $productsRecommendItem->feature_image_path }}" alt=""/>
                                                 <h2>{{ number_format($productsRecommendItem->price) }}</h2>
                                                 <p>{{ $productsRecommendItem->name }}</p>

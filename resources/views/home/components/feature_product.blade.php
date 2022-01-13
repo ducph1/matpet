@@ -1,5 +1,5 @@
 <div class="features_items">
-    <h2 class="title text-center">Sản Phẩm Nổi Bật</h2>
+    <h2 class="title text-center">Sản Phẩm Mới</h2>
 
     @foreach($products as $product)
         <div class="col-sm-4">
@@ -13,14 +13,14 @@
                                 class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                     </div>
                     <div class="product-overlay">
-                    <a href="" style="
+                    <a href="{{route('productdetail',['id' => $product->id])}}" style="
                         display: block;
                         width: 100%;
                         height: 100%;
                     "></a>
                             <div class="overlay-content">
-                               <a href=""> <h2>{{ number_format($product->price) }} VNĐ</h2></a>
-                               <a href=""> <p>{{ $product->name }}</p></a>
+                               <a href="{{route('productdetail',['id' => $product->id])}}"> <h2>{{ number_format($product->price) }} VNĐ</h2></a>
+                               <a href="{{route('productdetail',['id' => $product->id])}}"> <p>{{ $product->name }}</p></a>
                                 <a href="#" class="btn btn-default add-to-cart"><i
                                         class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                             </div>

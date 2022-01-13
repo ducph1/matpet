@@ -18,5 +18,8 @@ Route::get('/category/{slug}/{id}', [
     'as' => 'category.product',
     'uses' => 'CategoryController@index'
 ]);
-
+Route::get('/productdetail/{id}',[
+    'as' => 'productdetail',
+    'uses' => 'ProductDetailController@index'
+]);
 

@@ -76,7 +76,7 @@
                     <div class="search_box pull-right">
                         <input type="text" placeholder="Tìm Kiếm"/>
                         <div class="search_icon">
-                            <img src="eshopper/images/home/searchicon.png" alt="">
+                            <img src="/eshopper/images/home/searchicon.png" alt="">
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,8 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                         @if($category->categoryChildrent->count())
-                            <a href="">
+                            <a href="{{ route('category.product',
+                                        ['slug' => $category->slug, 'id' => $category->id]) }}">
                                 {{ $category->name }}
                             </a>
                             <a data-toggle="collapse" data-parent="#accordian" href="#sportswear_{{$category->id}}">
@@ -19,7 +20,7 @@
                            
                             @else
                             <a href="{{ route('category.product',
-                                        ['slug' => $categoryChilrent->slug, 'id' => $categoryChilrent->id]) }}">
+                                        ['slug' => $category->slug, 'id' => $category->id]) }}">
                                 {{ $category->name }}
                             </a>
                         @endif
@@ -30,11 +31,11 @@
                     <div id="sportswear_{{$category->id}}" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                @foreach($category->categoryChildrent as $categoryChilrent)
+                                @foreach($category->categoryChildrent as $categoryChildrent)
                                     <li>
                                         <a href="{{ route('category.product',
-                                        ['slug' => $categoryChilrent->slug, 'id' => $categoryChilrent->id]) }}">
-                                            {{ $categoryChilrent->name }}
+                                        ['slug' => $categoryChildrent->slug, 'id' => $categoryChildrent->id]) }}">
+                                            {{ $categoryChildrent->name }}
                                         </a>
                                     </li>
                                 @endforeach
