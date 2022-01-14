@@ -1627,7 +1627,7 @@ h2.title {
     border-color: transparent transparent transparent #de8ebe;
     position: absolute;
     top: 11px;
-    left: 48px;
+    left: 76px;
 }
 
 .breadcrumbs .breadcrumb>li+li:before {
@@ -1772,10 +1772,11 @@ h2.title {
 }
 
 .total_area ul li {
-    background: #E6E4DF;
-    color: #696763;
+    background: #edebe7;
+    color: #302f2c;
     margin-top: 10px;
     padding: 7px 20px;
+    font-size: 16px;
 }
 
 .user_option label {
@@ -2558,6 +2559,9 @@ textarea {
 .footer_dogs{
     position: relative;
 }
+.footer_dogs:hover{
+    animation: ziczac-X 0.5s linear;
+}
 .footer_dogs:hover .footer_dogs-info{
     /* display: block; */
     transform: rotate(0) scale(1) ;
@@ -2708,5 +2712,22 @@ textarea {
     padding: 1px 6px;
     color: #fff;
     border-radius: 6px;
+}
+.cart_products{
+    max-width: 110px;
+    max-height: 110px;
+}
+@keyframes ziczac-X {
+    0% {
+        transform: translateX(0)
+    }
+    35%{
+        transform: translateX(-4px)
+    }
+    60%{ transform: translateX(4px)
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 /* end them 1 so css */

@@ -22,4 +22,8 @@ Route::get('/productdetail/{id}',[
     'as' => 'productdetail',
     'uses' => 'ProductDetailController@index'
 ]);
+Route::get('/cart',[
+    'as' => 'cart',
+    'uses' => 'CartController@index'
+]);
 
