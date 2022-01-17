@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-2 clearfix">
                     <div class="logo pull-left">
-                        <a href="index.html"><img src="/assets/img/logomatpet.png" alt=""/></a>
+                        <a href="{{ route('home') }}"><img src="/assets/img/logomatpet.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-md-10 clearfix">

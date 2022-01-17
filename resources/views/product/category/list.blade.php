@@ -82,7 +82,36 @@
                 <div class="col-sm-9 padding-right">
                     <div class="features_items"><!--features_items-->
                         <h2 class="title text-center">Sản Phẩm</h2>
-
+                        <div class="row row-sort">
+                            <div class="col-md-4">
+                                <label for="amount">Sắp xếp theo</label>
+                                <form action="">
+                                    @csrf
+                                    <select name="sort" id="sort" class="form-control">
+                                        <option disabled selected value="{{Request::url()}}?sort_by=none">--Lọc--</option>
+                                        <option value="{{Request::url()}}?sort_by=tang_dan">Giá Tăng Dần</option>
+                                        <option value="{{Request::url()}}?sort_by=giam_dan">Giá Giảm Dần</option>
+                                        <option value="{{Request::url()}}?sort_by=a_z">Tên A-Z</option>
+                                        <option value="{{Request::url()}}?sort_by=z_a">Tên Z-A</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="col-md-4 section_filter">
+                                <label for="amount">Lọc Giá</label>
+                                <form action="">
+                                   <div id="slider-range"></div>
+                                   <div class='price_filter_change'>
+                                    <input type="text" id="amount_start" readonly style="border:0; color:#f6931f; font-weight:bold; width:30%; "><span>-</span>
+                                    <input type="text" id="amount_end" readonly style="border:0; color:#f6931f; font-weight:bold;width:30%; ">
+                                   </div>
+                                   
+                                   <input type="hidden" name="start_price" id="start_price">
+                                   <input type="hidden" name="end_price" id="end_price">
+                                   
+                                   <input type="submit" name="filter_price" value="Lọc" class="btn-filter btn btn-sm btn-primary">
+                                </form>
+                            </div>
+                        </div>
                         @foreach($products as $product)
                             <div class="col-sm-4">
                                 <div class="product-image-wrapper">

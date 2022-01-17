@@ -2730,4 +2730,26 @@ textarea {
         transform: translateX(0);
     }
 }
+.row-sort{
+    margin-left: 0;
+}
+.section_filter{
+    position: relative;
+}
+.btn-filter{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 4px !important;
+}
+.price_filter_change{
+    display: flex;
+}
+.price_filter_change span{
+    margin-right: 6px;
+    color: #f6931f;
+}
+
+
+
 /* end them 1 so css */
