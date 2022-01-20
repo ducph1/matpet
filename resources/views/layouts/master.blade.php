@@ -66,6 +66,75 @@
         })
     });
 </script>
+<script>
+    function addToCart(event){
+        event.preventDefault();
+        let urlCart = $(this).data('url');
+        $.ajax({
+            type: "GET",
+            url: urlCart,
+            dataType: "json",
+            success: function(data){
+                if(data.code === 200){
+                    alert('Thêm Sản Phẩm Thành Công');
+                }
+            },
+            error: function(){
+
+            }
+        });
+    }
+    $(function(){
+        $('.add-to-cart').on('click',addToCart);
+        $('.addToCart').on('click',addToCart);
+        
+    });
+</script>
+<script>
+    function cartUpdate(event) {
+        event.preventDefault();
+        let urlUpdateCart = $('.update_cart_url').data('url');
+        let id = $(this).data('id');
+        let quantity = $(this).parents('tr').find('input.cart_quantity_input').val();
+        $.ajax({
+            type: 'GET',
+            url: urlUpdateCart,
+            data: {id: id, quantity: quantity},
+            success: function(data) {
+                if(data.code === 200){
+                    $('.cart_wrapper').html(data.cart_component);
+                    alert('Cập Nhật Thành Công!')
+                }
+            },
+            error: function(){
+
+            }
+        });
+    }
+    function cartDelete(event) {
+        event.preventDefault();
+        let urlDeleteCart = $('.cart_info').data('url');
+        let id = $(this).data('id');
+        $.ajax({
+            type: 'GET',
+            url: urlDeleteCart,
+            data: {id: id},
+            success: function(data) {
+                if(data.code === 200){
+                    $('.cart_wrapper').html(data.cart_component);
+                    alert('Xóa Thành Công!')
+                }
+            },
+            error: function(){
+
+            }
+        });
+    }
+    $(function(){
+        $(document).on('click','.cart_quantity_update',cartUpdate);
+        $(document).on('click','.cart_quantity_delete',cartDelete);
+    })
+</script>
 @yield('js')
 </body>
 </html>

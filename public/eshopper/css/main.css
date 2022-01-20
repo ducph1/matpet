@@ -1727,7 +1727,7 @@ h2.title {
 }
 
 .cart_delete a {
-    background: #F0F0E9;
+   
     color: #FFFFFF;
     padding: 5px 7px;
     font-size: 16px
@@ -1850,7 +1850,10 @@ textarea {
 }
 
 .check_out {
-    margin-left: 20px
+    margin-left: 42px;
+    padding: 8px 18px;
+    border-radius: 4px;
+
 }
 
 
@@ -2749,7 +2752,14 @@ textarea {
     margin-right: 6px;
     color: #f6931f;
 }
-
+.cart_quantity_update{
+    background-color: #239edd;
+    opacity: 0.8;
+}
+.cart_quantity_delete{
+    background-color: #fd3b37;
+    opacity: 0.8;
+}
 
 
 /* end them 1 so css */

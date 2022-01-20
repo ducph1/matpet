@@ -18,7 +18,7 @@
                                                 <img src="{{ config('app.base_url') . $productsRecommendItem->feature_image_path }}" alt=""/>
                                                 <h2>{{ number_format($productsRecommendItem->price) }}</h2>
                                                 <p>{{ $productsRecommendItem->name }}</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i
+                                                <a href="#" data-url="{{route('addToCart',['id' => $productsRecommendItem->id])}}" class="btn btn-default add-to-cart"><i
                                                         class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng
                                                 </a>
                                            </a>

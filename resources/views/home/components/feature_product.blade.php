@@ -21,7 +21,7 @@
                             <div class="overlay-content">
                                <a href="{{route('productdetail',['id' => $product->id])}}"> <h2>{{ number_format($product->price) }} VNĐ</h2></a>
                                <a href="{{route('productdetail',['id' => $product->id])}}"> <p>{{ $product->name }}</p></a>
-                                <a href="#" class="btn btn-default add-to-cart"><i
+                                <a href="#" data-url="{{route('addToCart',['id' => $product->id])}}" class="btn btn-default add-to-cart"><i
                                         class="fa fa-shopping-cart"></i>Thêm Giỏ Hàng</a>
                             </div>
                        

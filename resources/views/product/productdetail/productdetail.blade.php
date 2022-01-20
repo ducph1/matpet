@@ -68,8 +68,8 @@
 								<!-- <img src="images/product-details/rating.png" alt="" /> -->
 								<span>
 									<span>{{ number_format($product->price) }} VNĐ</span>
-									<label>Số Lượng:</label>
-									<input type="text" value="1" />
+									<!-- <label>Số Lượng:</label>
+									<input type="number" value="1" min='1'/> -->
 									
 								</span>
 								<p><b>Tình Trạng:</b> Còn Hàng</p>
@@ -80,7 +80,7 @@
 								</p>
 								
 								<p><b>Danh Mục:</b> {{ $category_details->name }}</p>
-								<button type="button" class="btn btn-fefault cart">
+								<button type="button" data-url="{{route('addToCart',['id' => $product->id])}}" class="btn btn-fefault cart addToCart">
 										<i class="fa fa-shopping-cart"></i>
 										Thêm Giỏ Hàng
 								</button>

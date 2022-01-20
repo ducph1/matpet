@@ -26,4 +26,7 @@ Route::get('/cart',[
     'as' => 'cart',
     'uses' => 'CartController@index'
 ]);
+Route::get('/cart/{id}', 'CartController@addToCart')->name('addToCart');
+Route::get('/update-cart', 'CartController@updateCart')->name('updateCart');
+Route::get('/delete-cart', 'CartController@deleteCart')->name('deleteCart');
 
