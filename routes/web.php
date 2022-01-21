@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::post('/search', 'HomeController@search')->name('search');
 Route::get('/category/{slug}/{id}', [
     'as' => 'category.product',
     'uses' => 'CategoryController@index'

@@ -74,10 +74,14 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="search_box pull-right">
-                        <input type="text" placeholder="Tìm Kiếm"/>
-                        <div class="search_icon">
-                            <img src="/eshopper/images/home/searchicon.png" alt="">
-                        </div>
+                        <form action="{{URL::to('/search')}}" method="POST">
+                            {{csrf_field()}}
+                            <input type="text" name="keywords_submit" placeholder="Tìm Kiếm"/>
+                            <div class="search_icon">
+                                <input type="submit" name="search_items" value=''>
+                                <img src="/eshopper/images/home/searchicon.png" alt="">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

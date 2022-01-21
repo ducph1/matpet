@@ -24,4 +24,12 @@ class HomeController extends Controller
     {
         return view('test');
     }
+    public function search(Request $request)
+    {
+        $categorys = Category::where('parent_id', 0)->get();
+        $categorysLimit = Category::where('parent_id', 0)->take(3)->get();
+        $keywords = $request-> keywords_submit;
+        $search_products = Product::where('name','like','%'.$keywords.'%')->paginate(12);
+        return view('product.search.search', compact('categorys', 'categorysLimit','search_products'));
+    }
 }
