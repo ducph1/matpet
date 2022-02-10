@@ -54,7 +54,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}', [
             'as' => 'categories.edit',
             'uses' => 'CategoryController@edit',
-             'middleware' => 'can:category-edit'
+            'middleware' => 'can:category-edit'
         ]);
 
         Route::post('/update/{id}', [
@@ -67,7 +67,6 @@ Route::prefix('admin')->group(function () {
             'uses' => 'CategoryController@delete',
             'middleware' => 'can:category-delete'
         ]);
-
     });
 
     Route::prefix('menus')->group(function () {
@@ -98,7 +97,6 @@ Route::prefix('admin')->group(function () {
             'as' => 'menus.delete',
             'uses' => 'MenuController@delete'
         ]);
-
     });
 
 
@@ -131,8 +129,6 @@ Route::prefix('admin')->group(function () {
             'as' => 'slider.delete',
             'uses' => 'SliderAdminController@delete'
         ]);
-
-
     });
 
     // Settings
@@ -162,8 +158,6 @@ Route::prefix('admin')->group(function () {
             'as' => 'settings.delete',
             'uses' => 'AdminSettingController@delete'
         ]);
-
-
     });
     // User
     Route::prefix('users')->group(function () {
@@ -193,7 +187,6 @@ Route::prefix('admin')->group(function () {
             'as' => 'users.delete',
             'uses' => 'AdminUserController@delete'
         ]);
-
     });
     Route::prefix('roles')->group(function () {
         Route::get('/', [
@@ -217,8 +210,6 @@ Route::prefix('admin')->group(function () {
             'as' => 'roles.update',
             'uses' => 'AdminRoleController@update'
         ]);
-
-
     });
 
     Route::prefix('permissions')->group(function () {
@@ -231,13 +222,5 @@ Route::prefix('admin')->group(function () {
             'as' => 'permissions.store',
             'uses' => 'AdminPermissionController@store'
         ]);
-
-
     });
-
-
 });
-
-
-
-
