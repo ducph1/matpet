@@ -5,7 +5,7 @@
                 <a href="{{ route('category.product',
                                         ['slug' => $categoryChild->slug, 'id' => $categoryChild->id]) }}">{{ $categoryChild->name }}</a>
                 @if($categoryChild->categoryChildrent->count())
-                    @include('components.child_menu', ['categoryParent' => $categoryChild])
+                    @include('frontend.components.child_menu', ['categoryParent' => $categoryChild])
                 @endif
             </li>
         @endforeach

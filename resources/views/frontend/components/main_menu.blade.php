@@ -6,13 +6,13 @@
                                         ['slug' => $categoryParent->slug, 'id' => $categoryParent->id]) }}">
                     {{ $categoryParent->name }}
                     <i class="fa fa-angle-down"></i></a>
-                @include('components.child_menu', ['categoryParent' => $categoryParent])
+                @include('frontend.components.child_menu', ['categoryParent' => $categoryParent])
             </li>
         @endforeach
 
 
-        <li><a href="404.html">Dịch Vụ</a></li>
-        <li><a href="contact-us.html">Hỗ Trợ</a></li>
+        <li><a href="">Dịch Vụ</a></li>
+        <li><a href="">Hỗ Trợ</a></li>
 
     </ul>
 </div>
