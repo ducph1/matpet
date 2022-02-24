@@ -29,12 +29,18 @@ class HomeController extends Controller
         return view('frontend.product.search.search', compact('categories', 'categoriesLimit', 'search_products'));
     }
 
-    public function loginUser() {
-        if (auth()->check()) {
-            return redirect()->to('home');
-        }
-        return view('login');
-    }
+
+
+    // public function showLoginForm() {
+    //     return view('login');
+    // }
+
+    // public function loginUser() {
+    //     if (auth()->check()) {
+    //         return redirect()->to('home');
+    //     }
+    //     return view('login');
+    // }
 
     public function logout()
     {

@@ -12,7 +12,7 @@
     <script type="text/javascript" src="{{ asset('admins/main.js') }}"></script>
 @endsection
 @section('header')
-@include('partials.header-product')
+    @include('partials.header-product')
 @endsection
 
 

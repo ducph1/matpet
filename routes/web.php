@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+
 
 
 Route::get('/home', function () {
@@ -19,7 +22,8 @@ Route::get('/home', function () {
 });
 
 
-Route::prefix('admin')->group(function () {
+// Route::prefix('admin')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     Route::get('/', [
         'as' => 'admin.login',

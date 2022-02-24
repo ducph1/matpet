@@ -12,9 +12,8 @@ use App\Tag;
 use App\Traits\DeleteModelTrait;
 use App\Traits\StorageImageTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Storage;
-use DB;
 
 class AdminProductController extends Controller
 {
@@ -37,8 +36,9 @@ class AdminProductController extends Controller
 
     public function index()
     {
+        $htmlOptionSearchHeader = $this->getCategory($parentId = '');
         $products = $this->product->latest()->paginate(5);
-        return view('admin.product.index', compact('products'));
+        return view('admin.product.index', compact('products', 'htmlOptionSearchHeader'));
     }
 
     public function search(Request $request)

@@ -40,13 +40,30 @@
                     <form id="login-form" class="form" action="" method="post">
                         @csrf
                         <h3 class="text-center text-info">Login</h3>
+
+                        @if($errors->any())
+                            {{ dd($errors) }}
+                            @foreach ($errors->all() as $error)
+                                <h1>{{ $error }}</h1>
+                            @endforeach
+                        @endif
                         <div class="form-group">
-                            <label for="username" class="text-info">Username:</label><br>
-                            <input type="text" name="email" id="username" class="form-control">
+                            <label for="email" class="text-info">Email:</label><br>
+                            <input type="text" name="email" id="email" class="form-control">
+                            {{-- @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror --}}
                         </div>
                         <div class="form-group">
                             <label for="password" class="text-info">Password:</label><br>
                             <input type="password" name="password" id="password" class="form-control">
+                            {{-- @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror --}}
                         </div>
                         <div class="form-group">
                             <label for="remember-me"

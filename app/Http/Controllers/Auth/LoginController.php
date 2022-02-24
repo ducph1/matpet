@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Request;
 
 class LoginController extends Controller
 {
@@ -36,4 +37,37 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+        return view('login');
+    }
+
+    // public function login(Request $request)
+    // {
+    //     dd($request);
+    //     if (auth()->check()) {
+    //         return redirect()->to('home');
+    //     }
+    //     return view('login');
+    // }
+
+    protected function authenticated($user)
+    {
+        if ($user->is_admin) {
+            return redirect()->intended('/admin');
+        }
+
+        return redirect()->intended('/');
+    }
+
+    // protected function sendFailedLoginResponse(Request $request)
+    // {
+    //     return redirect()->back()
+    //         ->withInput($request->only($this->username(), 'password' ,'remember'))
+    //         ->withErrors([
+    //             $this->username() => 'ERRORS',
+    //         ]);
+    // }
+
 }

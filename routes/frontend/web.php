@@ -12,9 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
 
 Route::get('/', 'frontend\HomeController@index')->name('home');
-Route::get('/login', 'frontend\HomeController@loginUser')->name('frontend.login');
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('frontend.login');
+Route::post('/login', 'Auth\LoginController@login');
 Route::post('/search', 'frontend\HomeController@search')->name('search');
 Route::get('/category/{slug}/{id}', [
     'as' => 'category.product',
